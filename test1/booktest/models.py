@@ -21,4 +21,4 @@ class PersonInfo(models.Model):
     hbook = models.ForeignKey("BookInfo", on_delete=models.CASCADE)  # 关系属性 与图书之间的关系是一对多  多类中定义关系属性
 
     def __str__(self):
-        return self.btitle
+        return self.hname

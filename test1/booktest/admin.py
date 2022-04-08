@@ -9,6 +9,10 @@ class BookInfoAdmin(admin.ModelAdmin):
     list_display = ['id', 'btitle', 'bpub_date']
 
 
+class PersonInfoAdmin(admin.ModelAdmin):
+    list_display = ['hname', 'hcomment', 'hgender', 'hbook_id']
+
+
 # 注册模型类
 admin.site.register(BookInfo, BookInfoAdmin)
-admin.site.register(PersonInfo)
+admin.site.register(PersonInfo, PersonInfoAdmin)

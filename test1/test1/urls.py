@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
 
+# 从上到下匹配 已经成功匹配的字符串会去掉
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'admin/', admin.site.urls),
+    url(r'^', include(('booktest.urls', "book_url"), namespace="book_url")),  # include格式必须要有个app_name 用于命名
 ]
