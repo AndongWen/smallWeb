@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书详细信息</title>
+</head>
+<body>
+<h1>{{book.btitle}}</h1>
+    <ul>
+        {% for i in heroes %}
+            <li>{{ i.hname }} ---- {{i.hcomment}}</li>
+        {% empty %}
+            <li>没有英雄任务信息</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
