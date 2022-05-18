@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^index$', views.index),
     url(r'^books$', views.show_books),
     url(r'^books/(\d+)$', views.books_detail),
+    url(r'^create$', views.create),
+    url(r'^delete(\d+)$', views.delete),
 ]

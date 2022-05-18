@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'test1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'test1',  # 手动创建 数据库名字
+        'USER': 'root',
+        'PASSWORD': "mysql123456",
+        'HOST': "localhost",  # 指定mysl数据库所在电脑ip
+        'PORT': 3306,
     }
 }
 
